@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hey Love 💘</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: white;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      max-width: 400px;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    button {
+      font-size: 1.1rem;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    #yesBtn {
+      background: #fff;
+      color: #ff4d6d;
+      font-weight: bold;
+    }
+    #noBtn {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hey Beautiful 💖</h1>
+    <p>
+      From the moment you walked into my life, everything got brighter.<br><br>
+      Will you be my Valentine? 💌
+    </p>
+    <button id="yesBtn" onclick="yesClicked()">Yes 😍</button>
+    <button id="noBtn" onmouseover="moveButton()">No 😅</button>
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="text-align:center; color:white;">
+          <h1>YAYYYYY 💕</h1>
+          <p>You just made me the happiest person alive 🥰</p>
+          <p>Happy Valentine’s Day 💘</p>
+        </div>
+      `;
+    }
+
+    function moveButton() {
+      const btn = document.getElementById("noBtn");
+      const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+      btn.style.left = x + "px";
+      btn.style.top = y + "px";
+    }
+  </script>
+</body>
+</html>
