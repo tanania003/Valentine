@@ -2,82 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Hey Love 💘</title>
+  <title>For You 💖</title>
+
+  <!-- Romantic Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       height: 100vh;
-      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      background: linear-gradient(135deg, #ff5f9e, #ffc371);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: 'Poppins', sans-serif;
       color: white;
-      text-align: center;
+      overflow: hidden;
     }
+
     .card {
       background: rgba(255, 255, 255, 0.15);
       padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-      max-width: 400px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      max-width: 420px;
+      backdrop-filter: blur(10px);
     }
+
     h1 {
-      font-size: 2.5rem;
+      font-family: 'Pacifico', cursive;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
     }
+
     p {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
+      line-height: 1.6;
       margin-bottom: 30px;
     }
+
     button {
       font-size: 1.1rem;
-      padding: 12px 25px;
+      padding: 12px 28px;
       border: none;
       border-radius: 30px;
       cursor: pointer;
       margin: 10px;
     }
+
     #yesBtn {
-      background: #fff;
-      color: #ff4d6d;
+      background: white;
+      color: #ff4d88;
       font-weight: bold;
     }
+
     #noBtn {
       background: transparent;
       color: white;
       border: 2px solid white;
-      position: absolute;
+      position: fixed;
+    }
+
+    .gif {
+      width: 280px;
+      border-radius: 20px;
+      margin-top: 20px;
     }
   </style>
 </head>
+
 <body>
   <div class="card">
-    <h1>Hey Beautiful 💖</h1>
+    <h1>Hey My Love 💕</h1>
     <p>
-      From the moment you walked into my life, everything got brighter.<br><br>
-      Will you be my Valentine? 💌
+      Every moment with you feels like a beautiful dream.<br>
+      You make my bad days softer and my good days brighter.<br><br>
+      So I just need to ask one thing…
     </p>
+
+    <h2 style="font-family: 'Pacifico', cursive;">
+      Will you be my Valentine? 💌
+    </h2>
+
     <button id="yesBtn" onclick="yesClicked()">Yes 😍</button>
-    <button id="noBtn" onmouseover="moveButton()">No 😅</button>
+    <button id="noBtn">No 🙈</button>
   </div>
 
   <script>
-    function yesClicked() {
-      document.body.innerHTML = `
-        <div style="text-align:center; color:white;">
-          <h1>YAYYYYY 💕</h1>
-          <p>You just made me the happiest person alive 🥰</p>
-          <p>Happy Valentine’s Day 💘</p>
-        </div>
-      `;
-    }
+    const noBtn = document.getElementById("noBtn");
 
     function moveButton() {
-      const btn = document.getElementById("noBtn");
-      const x = Math.random() * (window.innerWidth - btn.offsetWidth);
-      const y = Math.random() * (window.innerHeight - btn.offsetHeight);
-      btn.style.left = x + "px";
-      btn.style.top = y + "px";
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+
+    noBtn.addEventListener("touchstart", moveButton);
+    noBtn.addEventListener("mouseover", moveButton);
+    noBtn.addEventListener("click", moveButton);
+
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="text-align:center; color:white; padding:40px;">
+          <h1 style="font-family:'Pacifico', cursive; font-size:3rem;">
+            YAYYYY 💖
+          </h1>
+          <p style="font-size:1.2rem;">
+            You just made my heart skip a beat 🥹<br>
+            I’m so lucky to have you 💕
+          </p>
+          <img class="gif" src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" alt="romantic gif">
+          <p style="margin-top:20px;">
+            Happy Valentine’s Day 💘
+          </p>
+        </div>
+      `;
     }
   </script>
 </body>
