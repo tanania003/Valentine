@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>For You 💖</title>
 
-  <!-- Romantic Google Font -->
+  <!-- Romantic Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -39,7 +39,7 @@
     p {
       font-size: 1.15rem;
       line-height: 1.6;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     button {
@@ -63,25 +63,20 @@
       border: 2px solid white;
       position: fixed;
     }
-
-    .gif {
-      width: 280px;
-      border-radius: 20px;
-      margin-top: 20px;
-    }
   </style>
 </head>
 
 <body>
   <div class="card">
     <h1>Hey My Love 💕</h1>
+
     <p>
       Every moment with you feels like a beautiful dream.<br>
       You make my bad days softer and my good days brighter.<br><br>
       So I just need to ask one thing…
     </p>
 
-    <h2 style="font-family: 'Pacifico', cursive;">
+    <h2 style="font-family:'Pacifico', cursive;">
       Will you be my Valentine? 💌
     </h2>
 
@@ -105,15 +100,36 @@
 
     function yesClicked() {
       document.body.innerHTML = `
-        <div style="text-align:center; color:white; padding:40px;">
-          <h1 style="font-family:'Pacifico', cursive; font-size:3rem;">
+        <div style="
+          text-align:center;
+          color:white;
+          padding:40px;
+          font-family:'Poppins', sans-serif;
+        ">
+          <h1 style="
+            font-family:'Pacifico', cursive;
+            font-size:3rem;
+            margin-bottom:10px;
+          ">
             YAYYYY 💖
           </h1>
-          <p style="font-size:1.2rem;">
-            You just made my heart skip a beat 🥹<br>
+
+          <p style="font-size:1.2rem; line-height:1.6;">
+            You just made my heart melt 🥹<br>
             I’m so lucky to have you 💕
           </p>
-          <img class="gif" src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" alt="romantic gif">
+
+          <img
+            src="https://media.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif"
+            alt="romantic hug"
+            style="
+              width:280px;
+              max-width:90%;
+              border-radius:20px;
+              margin-top:20px;
+            "
+          />
+
           <p style="margin-top:20px;">
             Happy Valentine’s Day 💘
           </p>
